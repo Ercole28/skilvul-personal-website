@@ -195,9 +195,17 @@ main{
   background: #5DE1AE;
   animation-duration: 3s;
   animation-direction: reverse;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.right__side img{
+.right__side #green__blob img{
+  width: 45px;
+}
+
+.right__side > img{
   display: block;
   position: relative;
   margin-left: auto;
@@ -230,6 +238,13 @@ main{
 }
 
 /* | ----- C. Media Queries ----- | */
+@media only screen and (min-width: 400px) {
+  /* Common CSS */
+  .right__side #green__blob{
+    width: 120px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   /* Utility */
   .visible__on__desktop{
@@ -237,17 +252,11 @@ main{
   }
 
   /* Common CSS */
-  .right__side #green__blob{
-    width: 160px;
+  .right__side #green__blob img{
+    width: 55px;
   }
 }
 
-@media only screen and (min-width: 768px) {
-  /* Common CSS */
-  .right__side #green__blob{
-    width: 120px;
-  }
-}
 @media only screen and (min-width: 1024px) {
   /* Utility */
   .visible__on__desktop{
@@ -301,5 +310,9 @@ main{
   .right__side #green__blob{
     width: 160px;
     right: 48px;
+  }
+  
+  .right__side #green__blob img{
+    width: 65px;
   }
 }
