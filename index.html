@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bradley's Portfolio Website</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="navigation__wrapper container">
+        <a href="#">
+          <div class="logo">
+            <h1>
+              <span class="text__green">Let's</span>
+              <span class="text__light__yellow">Bread</span>
+            </h1>
+            <img src="assets/icons/bread.png" alt="Bread Icon">
+          </div>
+        </a>
+        <nav class="visible__on__desktop">
+          <ul class="navigation__container">
+            <li><a class="nav__link active" href="#">.home()</a></li>
+            <li><a class="nav__link" href="about.html">.about()</a></li>
+            <li><a class="nav__link" href="blog.html">.blog()</a></li>
+            <li><a class="nav__link" href="portfolio.html">.portfolio()</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="container">
+      <main>
+        <div class="left__side">
+          <div>
+            <h1>Hi there!! 👋</h1>
+            <h1>
+              I'm
+              <span class="text__yellow">Bradley</span>
+              <span class="text__green">Ganap</span>
+            </h1>
+          </div>
+          <p class="text__gray">
+            I'm a seasoned developer specializing in the creation of <br class="visible__on__tablet" />small
+            to medium-sized websites.
+          </p>
+          <a href="assets/CV Bradley Andrew Ercole.pdf" id="cta__link" target="_blank">
+            <button class="cta__button">
+              <span>Curriculum Vitae</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 384 512"
+              >
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z"
+                />
+              </svg>
+            </button>
+          </a>
+        </div>
+        <div class="right__side">
+          <div id="yellow__blob">
+
+          </div>
+          <img id="profile__pict" src="assets/images/Bradley Square.webp" alt="Bradley Ganap">
+          <div id="green__blob">
+
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+/* | ----- A. Reset ----- | */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #f9fafb;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* | ----- B. Style - Notes: (Mobile First Design) ----- | */
+/* • Utility Classes */
+.container{
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.heading{
+  font-size: 36px;
+  font-weight: 600;
+  color: #F9FAFB;
+}
+
+.sub__heading{
+  font-size: 16px;
+  font-weight: 400;
+  color: #d1d5db;
+}
+
+.text__green{
+  color: #34d399;
+} 
+
+.text__light__yellow{
+  color: #FCD34D;
+} 
+
+.text__yellow{
+  color: #fbbf24;
+}
+
+.text__gray{
+  color: #e5e7eb;
+}
+
+.visible__on__tablet{
+  display: none;
+}
+.visible__on__desktop{
+  display: none;
+}
+
+/* • Common CSS */
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body{
+  background: #131313;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.navigation__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul.navigation__container{
+  display: flex;
+  column-gap: 24px;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.logo h1{
+  font-size: 24px;
+  line-height: 2rem;
+}
+
+.logo img{
+  width: 28px;
+}
+
+.navigation__container li{
+  list-style: none;
+}
+
+.nav__link.active{
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 50px;
+  height: auto;
+  padding: 100px 0;
+}
+
+.left__side{
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  text-align: center;
+}
+
+.left__side h1{
+  font-size: 36px;
+  line-height: 2.5rem;
+}
+
+#cta__link{
+  margin: 0 auto;
+}
+
+.cta__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #f6c936;
+  cursor: pointer;
+  transition: .3s ease-out;
+  border: none;
+  box-shadow: 0px 2px 10px 2px #f59f0bda;
+}
+
+.cta__button:hover{
+  background: #fbc02b;
+  transform: translateY(4px);
+}
+
+.cta__button span{
+  font-size: 16px;
+  font-weight: 700;
+  color: #B45309;
+}
+
+.cta__button svg{
+  font-size: 18px;
+  fill: #B45309;
+  margin-bottom: 2px;
+}
+
+.right__side{
+  position: relative;
+  order: 1;
+}
+
+.right__side #yellow__blob, .right__side #green__blob{
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.right__side img, .right__side #yellow__blob, .right__side #green__blob{
+  animation-name: blob-animation;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  border-radius: 50%;
+}
+
+.right__side #yellow__blob{
+  top: 0; right: 0;
+  background: #F8CD48;
+  animation-duration: 6s;
+}
+
+.right__side #green__blob{
+  bottom: 0; right: 8px;
+  width: 90px;
+  background: #5DE1AE;
+  animation-duration: 3s;
+  animation-direction: reverse;
+}
+
+.right__side img{
+  display: block;
+  position: relative;
+  margin-left: auto;
+  width: 100%;
+  max-width: 400px;
+  animation-duration: 4s;
+}
+
+@keyframes blob-animation {
+  0% {
+    transform: scale(1);
+    border-radius: 29% 71% 19% 81% / 45% 43% 57% 55%;
+  }
+  25% {
+    transform: scale(0.985);
+    border-radius: 64% 36% 62% 38% / 45% 43% 57% 55%;
+  }
+  50% {
+    transform: scale(1);
+    border-radius: 82% 18% 34% 66% / 59% 64% 36% 41%;
+  }
+  75% {
+    transform: scale(1.035);
+    border-radius: 53% 47% 30% 70% / 77% 40% 60% 23%;
+  }
+  100% {
+    transform: scale(1);
+    border-radius: 29% 71% 19% 81% / 45% 43% 57% 55%;
+  }
+}
+
+/* | ----- C. Media Queries ----- | */
+@media only screen and (min-width: 768px) {
+  /* Utility */
+  .visible__on__desktop{
+    display: block;
+  }
+
+  /* Common CSS */
+  .right__side #green__blob{
+    width: 160px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Common CSS */
+  .right__side #green__blob{
+    width: 120px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* Utility */
+  .visible__on__desktop{
+    display: block;
+  }
+
+  /* Common CSS */
+  .logo h1{
+    font-size: 30px;
+    line-height: 2.25rem;
+  }
+
+  .logo img{
+    width: 32px;
+  }
+
+  main{
+    flex-direction: row;
+    height: 100vh;
+    padding: 0;
+  }
+
+  #cta__link{
+    margin: unset;
+  }
+
+  .cta__button:hover{
+    transform: translateX(5px);
+  }
+
+  .left__side, .right__side{
+    flex: 1;
+  }
+  .left__side{
+    order: 1;
+    text-align: unset;
+  }
+  .right__side{
+    order: 2;
+  }
+
+  .left__side h1{
+    font-size: 48px;
+    line-height: 1;
+  }
+
+  .right__side img, .right__side #yellow__blob{
+    max-width: 530px;
+  }
+
+  .right__side #green__blob{
+    width: 160px;
+    right: 48px;
+  }
+}
