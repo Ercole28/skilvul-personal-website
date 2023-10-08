@@ -324,14 +324,14 @@ main{
   }
 }
 
-.portfolio__wrapper, .about__wrapper{
+.portfolio__wrapper, .about__wrapper, .blog__wrapper{
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
 
-.portfolio__wrapper{
+.portfolio__wrapper, .blog__wrapper{
   row-gap: 36px;
 }
 
