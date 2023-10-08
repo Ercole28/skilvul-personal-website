@@ -165,7 +165,7 @@ nav ul.navigation__container{
   justify-content: center;
   align-items: center;
   z-index: 100;
-  transition: all .4s ease-in;
+  transition: top .4s ease-in;
 }
 
 .mobile__menu.opened{
@@ -514,7 +514,11 @@ code {
   }
 
   /* Common CSS */
-  .hamburger__button{
+  #hamburger__button{
+    display: none;
+  }
+
+  .mobile__menu{
     display: none;
   }
 
