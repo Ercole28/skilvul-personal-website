@@ -141,6 +141,57 @@ nav ul.navigation__container{
   color: #fbbf24;
 }
 
+#hamburger__button{
+  display: block;
+  width: 21px;
+  height: 24px;
+}
+
+#hamburger__button svg{
+  fill: white;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.mobile__menu{
+  position: fixed;
+  left: 0; top: 100%;
+  width: 100vw;
+  height: 100%;
+  background: #131313;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: all .4s ease-in;
+}
+
+.mobile__menu.opened{
+  top: 0;
+}
+
+.mobile__menu .navigation__container{
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+}
+
+.mobile__menu .navigation__container .nav__link{
+  font-size: 18px;
+}
+
+#close__button{
+  padding: 8px;
+  background: transparent;
+  border: none;
+  fill: white;
+  font-size: 24px;
+  margin-bottom: -100px;
+  cursor: pointer;
+}
+
 main{
   display: flex;
   flex-direction: column;
@@ -463,6 +514,10 @@ code {
   }
 
   /* Common CSS */
+  .hamburger__button{
+    display: none;
+  }
+
   .right__side #green__blob img{
     width: 55px;
   }
