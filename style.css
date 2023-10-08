@@ -20,9 +20,13 @@ a{
   padding: 0 20px;
 }
 
+.vertical__padding{
+  padding: 120px 0px;
+}
+
 .heading{
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
   color: #F9FAFB;
 }
 
@@ -55,6 +59,35 @@ a{
   display: none;
 }
 
+.code__indent{
+  padding-left: 24px;
+}
+
+.variable__type{
+  color: #ffb476;
+}
+
+.variable__name{
+  color: #eed9af;
+}
+
+.data__string{
+  color: #f0c774;
+}
+.data__number{
+  color: #c48092;
+}
+.semicolon{
+  color: #8a8073;
+}
+
+.text__lightgreen{
+  color: #9ebb67;
+}
+.text__red{
+  color: #c54739;
+}
+
 /* • Common CSS */
 html{
   scroll-behavior: smooth;
@@ -66,7 +99,9 @@ body{
 }
 
 header{
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   padding: 20px 0;
 }
@@ -132,6 +167,7 @@ main{
 
 #cta__link{
   margin: 0 auto;
+  width: fit-content;
 }
 
 .cta__button{
@@ -237,6 +273,173 @@ main{
   }
 }
 
+.portfolio__wrapper, .about__wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.portfolio__wrapper{
+  row-gap: 36px;
+}
+
+.about__wrapper{
+  row-gap: 80px;
+}
+
+.card__list{
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+
+.card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  background: rgb(31, 31, 31);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card img{
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card__info{
+  text-align: center;
+}
+
+.card .card__title{
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card .description{
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.card__button{
+  font-size: 28px;
+  background: rgb(252, 211, 77);
+  padding: 4px 20px;
+  border-radius: 6px;
+  color: #B45309;
+  font-weight: 800;
+  transition: .3s ease-out;
+}
+
+.card__button:hover{
+  background: #fbc02b;
+}
+
+.biography__row, .marquee__row{
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+code {
+  font-size: 16px;
+  font-family: monospace;
+}
+
+/* Marquee */
+.marquee{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  --duration: 38s;
+  --gap: 2rem;
+
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  padding: 12px 0;
+}
+.marquee:before, .marquee:after{
+  content: "";
+  position: absolute;
+  z-index: 20;
+  display: block;
+  width: 100px;
+  height: 100%;
+  top: 0;
+}
+.marquee:before{
+  left: 0;
+  background: linear-gradient(to right, #131313, #13131300);
+}
+.marquee:after{
+  right: 0;
+  background: linear-gradient(to left, #131313, #13131300);
+}
+
+.marquee__box{
+  transition: opacity 1s ease-in;
+  padding: 0;
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll var(--duration) linear infinite;
+  padding: 12px 0;
+}
+
+.marquee__reverse .marquee__group {
+  animation-direction: reverse;
+}
+.marquee__item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 16px;
+  background: #1f1f1f;
+  border-radius: 12px;
+}
+.marquee__item img{
+  width: 40px;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
 /* | ----- C. Media Queries ----- | */
 @media only screen and (min-width: 400px) {
   /* Common CSS */
@@ -247,6 +450,14 @@ main{
 
 @media only screen and (min-width: 768px) {
   /* Utility */
+  .vertical__padding{
+    padding: 160px 0px;
+  }
+
+  .heading{
+    font-size: 34px;
+  }
+
   .visible__on__desktop{
     display: block;
   }
@@ -255,10 +466,22 @@ main{
   .right__side #green__blob img{
     width: 55px;
   }
+
+  code{
+    font-size: 22px;
+  }
+
+  .card__list{
+    grid-template-columns: auto auto;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   /* Utility */
+  .heading{
+    font-size: 36px;
+  }
+
   .visible__on__desktop{
     display: block;
   }
@@ -314,5 +537,21 @@ main{
   
   .right__side #green__blob img{
     width: 65px;
+  }
+
+  .card__list{
+    grid-template-columns: 400fr 400fr 400fr;
+  }
+
+  .card img{
+    height: 240px;
+  }
+
+  .marquee{
+    --gap: 7.5rem;
+  }
+
+  .marquee__item img{
+    width: 56px;
   }
 }
