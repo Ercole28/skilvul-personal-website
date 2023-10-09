@@ -5,6 +5,7 @@
   box-sizing: border-box;
   user-select: none;
   color: #f9fafb;
+  font-family: 'Poppins', sans-serif;
 }
 
 a{
@@ -103,7 +104,6 @@ html{
 
 body{
   background: #131313;
-  font-family: 'Poppins', sans-serif !important;
 }
 
 header{
