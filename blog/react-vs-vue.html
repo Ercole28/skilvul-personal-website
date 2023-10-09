@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React vs Vue.js Which is better for Web Development</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <!-- Style -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navigation__wrapper container">
+        <a href="index.html">
+          <div class="logo">
+            <h1>
+              <span class="text__green">Let's</span>
+              <span class="text__light__yellow">Bread</span>
+            </h1>
+            <img src="../assets/icons/bread.png" alt="Bread Icon">
+          </div>
+        </a>
+        <nav class="visible__on__desktop">
+          <ul class="navigation__container">
+            <li><a class="nav__link" href="../../index.html">.home()</a></li>
+            <li><a class="nav__link" href="../../about.html">.about()</a></li>
+            <li><a class="nav__link" href="../../blog.html">.blog()</a></li>
+            <li><a class="nav__link" href="../../portfolio.html">.portfolio()</a></li>
+          </ul>
+        </nav>
+        <!-- Mobile -->
+        <div id="hamburger__button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </div>
+        <div class="mobile__menu">
+          <ul class="navigation__container">
+            <li><a class="nav__link" href="../../index.html">.home()</a></li>
+            <li><a class="nav__link" href="../../about.html">.about()</a></li>
+            <li><a class="nav__link" href="../../blog.html">.blog()</a></li>
+            <li><a class="nav__link" href="../../portfolio.html">.portfolio()</a></li>
+          </ul>
+          <button id="close__button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="blog__wrapper vertical__padding">
+        <article class="detailed__blog">
+          <div>
+            <h1 class="article__title heading">React vs Vue.js Which is better for Web Development</h1>
+            <h3 class="article__info sub__heading text__gray">
+              by Jamon Dixon from 
+              <a href="https://medium.com/geekculture/react-vs-vue-js-b5d82e7af861#:~:text=React's%20cover%20all%20of%20the,and%20very%20easy%20to%20understand" target="_blank" class="text__light__yellow">Medium</a>
+              <span class="bullet__separator">•</span> 
+              27 September 2021
+            </h3> 
+          </div>
+          <img class="main__img" src="../assets/images/blog/react-vs-vue.webp" alt="React vs Vue.js Which is better for Web Development">
+          <div class="article__content">
+            <div class="mt__40"></div>
+
+            <p class="content__paragraph">
+              Which tech to choose for your next project?
+            </p>
+            <p class="content__paragraph">
+              When starting a project, there are plenty of frameworks you could choose from when thinking of your frontend. But, which one should you choose? I’m going to dive into a couple of the obvious front-runners to help those of you out there struggling with the decision, <span class="font__bold">React</span> and <span class="font__bold">Vue.js.</span> 
+            </p>
+
+            <h4 class="content__heading mt__40">Similarities</h4>
+            <p class="content__paragraph">
+              Let’s get into the similarities of these two technologies before finding out what makes them different. They actually have a lot in common.
+            </p>
+
+            <h4 class="content__heading mt__40">Similarities</h4>
+            <p class="content__paragraph">
+              Let’s get into the similarities of these two technologies before finding out what makes them different. They actually have a lot in common.
+            </p>
+
+            <ul class="content__list">
+              <li>
+                First of all, both of these are written in JavaScript and use the Virtual Document Object Model to interact with HTML documents. The vDOM, for those of you who may not know, is represents the way data is rendered on the web page by only re-rendering the data that has changed, instead of the entire page.
+              </li>
+              <li>
+                Each one of these technologies have very large, active communities and really good support.
+              </li>
+              <li>
+                Both have a component-based architecture and have their own component libraries to make it easier to develop mobile applications with them.
+              </li>
+              <li>
+                Share in that they use component lifecycle methods(mounting, updating, unmounting)
+              </li>
+              <li>
+                <span class="font__bold">Typescript </span> support
+              </li>
+              <li>
+                Backward compatibility
+              </li>
+            </ul>
+            <p class="content__paragraph">
+              These can be so similar that at first glance you may not notice any of the differences. But in a closer look, I’ll flush them out for you.
+            </p>
+
+            <h4 class="content__heading mt__40">Differences</h4>
+            <h5 class="content__heading2">Popularity</h5>
+            <p class="content__paragraph">
+              React has a very robust community, resulting in a multitude of tutorials, blogs, an online courses to consult with and aid in the workflow of a developer. Not to mention, the various libraries, packages, and tools to pull from.On Github, there are over 175k starred React projects. Some notable companies that use it are Pintrest, Uber, Netflix, Twitter, and AirBnB.
+            </p>
+            <p class="content__paragraph">
+              Vue.js has a smaller market share but has started to bridge the gap in popularity as of recently. It is gaining ground and support by the day. However, it does not have as many resources or packages available and the support is not as extensive as React. Some of the bigger names in the game include Gitlab, Adobe, Vice, Trustpilot. The Vue.js Github starred projects amount to 189k.
+            </p>
+            <p>Advantage: React</p>
+
+            <h5 class="content__heading2 mt__40">Doumentation</h5>
+            <p class="content__paragraph">
+              When it comes to the docs of each of these, I find that one of them is lacking. React’s cover all of the basics and touches on the some advanced concepts, but it doesn’t really get into the details of the whole ecosystem.
+            </p>
+            <p class="content__paragraph">
+              Vue’s on the other hand are very detail oriented and have pretty much anything you would need to know in there. They are clear, concise and very easy to understand.
+            </p>
+            <p class="content__paragraph">Both are translated into multiple languages.</p>
+            <p class="content__paragraph">
+              Both are translated into multiple languages.
+            </p>
+            <p class="content__paragraph">Advantage: Vue</p>
+
+            <h5 class="content__heading2 mt__40">Mobile Development</h5>
+            <p class="content__paragraph">
+              React Native is super convenient when concerning mobile development allowing you to reuse almost all of the code between Android and iOS. You end up saving time and money, by not having to create two entirely different codebases for each platform. This cross-platform functionality is very hard to beat. You also get great performance and flexibility.
+            </p>
+            <p class="content__paragraph">
+              Vue has a couple of different solutions for developing on mobile. NativeScript being the first, allows you to compile into an Android or iOS app once you have written your Vue application. The second is called Capacitor, which allows you to install an API on an existing Vue website to add the mobile functionality. Finally, there is also Vue Native which attempts to combine the Vue and React Native ecosystems on a basic level.
+            </p>
+            <p class="content__paragraph">
+              I wouldn’t let the higher number of mobile solutions fool you.
+            </p>
+            <p class="content__paragraph">Advantage: React</p>
+
+            <h5 class="content__heading2 mt__40">Peformance</h5>
+            <p class="content__paragraph">
+              Since both of these frameworks make use of the virtual DOM, they are pretty much neck and neck.
+            </p>
+            <p class="content__paragraph">
+              The metrics used to compare these two in this category would be start-up time and runtime performance. Using the benchmark of Slowdown Geometric mean, Vue(1.41) just barely edges out React(1.54) resulting in a difference of only a few milliseconds.
+            </p>
+            <p class="content__paragraph">
+              The size of the code plays a part in that slight difference of performance. Naturally, the lighter the code the faster. Since React is slightly heavier, it would make sense that it would perform a little slower.
+            </p>
+            <p class="content__paragraph">Advantage: Vue</p>
+
+            <h4 class="content__heading mt__40">And the winner is...</h4>
+            <p class="content__paragraph">
+              Hard to say.
+            </p>
+            <p class="content__paragraph">
+              It really just depends on your personal preference. If you would rather write in JSX over HTML, then I would go with React. If you want it to be as fast as computably possible, go with Vue. If you are trying to develop a mobile application, opt for React.
+            </p>
+            <p class="content__paragraph">
+              The reality is they are both wonderfully powerful options to help you build out a frontend. I don’t think there is a wrong answer if choosing between the two.
+            </p>
+            <p class="content__paragraph">
+              Hopefully this gives you insight into helping you make the decision for which one is right for you. Check out my other blogs and feel free to connect with me on LinkedIn.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
