@@ -3,8 +3,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  color: #f9fafb;
   user-select: none;
 }
 
@@ -104,6 +102,8 @@ html{
 
 body{
   background: #131313;
+  font-family: 'Poppins', sans-serif !important;
+  color: #f9fafb;
 }
 
 header{
